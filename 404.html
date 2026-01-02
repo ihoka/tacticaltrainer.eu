@@ -1,0 +1,24 @@
+---
+layout: default
+title: "Page Not Found"
+description: "The page you're looking for doesn't exist. Return to tactical training content."
+permalink: /404.html
+sitemap: false
+---
+
+<div class="error-page">
+  <div class="error-code">404</div>
+  <h1 class="error-title">Position Not Found</h1>
+  <p class="error-description">
+    The tactical content you're looking for has either moved, been archived, or never existed.
+    Regroup and navigate back to base.
+  </p>
+  <div class="error-actions">
+    <a href="{{ '/' | relative_url }}" class="error-btn error-btn-primary">
+      Return to Base
+    </a>
+    <a href="{{ '/about' | relative_url }}" class="error-btn error-btn-secondary">
+      About Tactical Training
+    </a>
+  </div>
+</div>

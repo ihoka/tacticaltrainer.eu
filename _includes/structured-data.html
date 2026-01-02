@@ -1,0 +1,115 @@
+<!-- Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Tactical Training",
+  "url": "https://tacticaltraining.eu",
+  "logo": "https://tacticaltraining.eu/assets/images/logo.png",
+  "sameAs": [
+    "https://github.com/ihoka/tacticaltraining.eu"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "kent@tacticaltraining.eu",
+    "contactType": "customer service"
+  }
+}
+</script>
+
+<!-- Website Schema with SearchAction -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://tacticaltraining.eu/",
+  "name": "Tactical Training Blog",
+  "description": "{{ site.description | escape }}",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://tacticaltraining.eu/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+{%- if page.layout == "post" -%}
+<!-- Enhanced Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  "headline": "{{ page.title | escape }}",
+  "description": "{{ page.description | default: page.excerpt | strip_html | truncate: 160 | escape }}",
+  "image": "{{ page.image | default: '/assets/images/default-post-image.jpg' | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.author | default: site.author.name }}",
+    "url": "https://tacticaltraining.eu/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tacticaltraining.eu/assets/images/logo.png"
+    }
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "keywords": "{{ page.tags | join: ', ' }}",
+  "articleSection": "{{ page.categories | join: ', ' }}",
+  "wordCount": "{{ content | number_of_words }}",
+  "timeRequired": "PT{{ page.reading_time | default: 5 }}M"
+}
+</script>
+
+{%- if page.faq -%}
+<!-- FAQPage Schema for posts with Q&A content -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in page.faq -%}
+    {
+      "@type": "Question",
+      "name": "{{ item.question | escape }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ item.answer | escape }}"
+      }
+    }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
+
+{%- if page.howto -%}
+<!-- HowTo Schema for training guides -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{{ page.title | escape }}",
+  "description": "{{ page.description | escape }}",
+  "totalTime": "PT{{ page.duration | default: '30' }}M",
+  "supply": {{ page.equipment | jsonify }},
+  "step": [
+    {%- for step in page.steps -%}
+    {
+      "@type": "HowToStep",
+      "name": "{{ step.name | escape }}",
+      "text": "{{ step.text | escape }}"
+    }{%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
+{%- endif -%}

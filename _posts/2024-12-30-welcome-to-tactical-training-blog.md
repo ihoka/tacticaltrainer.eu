@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "Welcome to the Tactical Training Blog"
+title: "Tactical Fitness Training: Science-Based Programs for Operators & First Responders"
 date: 2024-12-30 09:00:00 -0500
 categories: [Training]
 author: Tactical Training Team
-tags: [welcome, training, fitness]
+tags: [tactical fitness, operational workout, first responder fitness, training protocols]
 reading_time: 3
+description: "Discover evidence-based tactical fitness training programs designed for operators, first responders, and serious athletes. Master HIC, LISS, and strength protocols."
+image: /assets/images/tactical-training-hero.jpg
 ---
 
 Welcome to the Tactical Training Blog. This is your new source for tactical fitness insights, training protocols, and performance optimization strategies designed for serious athletes and tactical professionals.

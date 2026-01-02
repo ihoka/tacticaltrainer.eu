@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<div class="category-page">
+  <header class="category-header">
+    <h1 class="category-title">
+      {{ page.title }}
+      <span class="category-count">{{ site.categories[page.category] | size }} posts</span>
+    </h1>
+    {%- if page.description -%}
+    <p class="category-description">{{ page.description }}</p>
+    {%- endif -%}
+  </header>
+
+  <ul class="post-list">
+    {%- for post in site.categories[page.category] -%}
+    <li class="post-card">
+      <div class="post-categories">
+        {%- for category in post.categories -%}
+        <span class="category-badge category-{{ category | downcase | replace: ' ', '-' }}">{{ category | upcase }}</span>
+        {%- endfor -%}
+      </div>
+      <h2 class="post-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </h2>
+      <div class="post-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: site.minima.date_format }}
+        </time>
+        {%- if post.reading_time -%}
+        <span>&bull; {{ post.reading_time }} min read</span>
+        {%- endif -%}
+      </div>
+      {%- if post.description -%}
+      <p class="post-excerpt">{{ post.description }}</p>
+      {%- elsif post.excerpt -%}
+      <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+      {%- endif -%}
+      <a href="{{ post.url | relative_url }}" class="read-more">
+        Read More &rarr;
+      </a>
+    </li>
+    {%- endfor -%}
+  </ul>
+</div>
