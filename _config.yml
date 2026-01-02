@@ -5,7 +5,7 @@ title: Tactical Training Blog
 description: >-
   Tactical fitness insights, training protocols, and performance optimization
   strategies for serious athletes and tactical professionals.
-baseurl: "/blog"
+baseurl: "/"
 url: "https://tacticaltraining.eu"
 
 # Output to Rails public directory
@@ -15,6 +15,7 @@ destination: ../public/blog
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
 
