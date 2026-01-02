@@ -69,8 +69,9 @@ defaults:
     values:
       layout: "default"
 
-# Exclude from processing
+# Exclude from processing (prevents files from being published)
 exclude:
+  # Build/dependency files
   - Gemfile
   - Gemfile.lock
   - node_modules
@@ -78,7 +79,25 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  # Documentation and specs
   - README.md
+  - specs/
+  - reports/
+  # AI assistant instruction files
+  - AGENTS.md
+  - CLAUDE.md
+  - GEMINI.md
+  - .clinerules
+  - .cursorrules
+  - .windsurfrules
+  - .replit.md
+  - .github/
+  - .idx/
+  # Local development files
+  - .claude/
+  - .crush/
+  - mise.toml
+  - .ruby-lsp/
 
 # Markdown settings
 markdown: kramdown

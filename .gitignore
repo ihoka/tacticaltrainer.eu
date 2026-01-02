@@ -32,7 +32,12 @@ analyze-*.sh
 
 # Claude settings (local only)
 .claude/settings.local.json
+.claude/todos.json
 
-# Don't ignore reports directory
+# Local development tools
+.crush/
+.ruby-lsp/
+
+# Don't ignore reports directory (tracked in git, but excluded from Jekyll build)
 !reports/
 !reports/**
