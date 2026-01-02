@@ -1,12 +1,16 @@
 # Tactical Training Blog
 # Jekyll configuration based on minima, customized for military/tactical theme
 
-title: Tactical Training Blog
+title: Tactical Training Blog | Operational Fitness & Performance
+tagline: Evidence-Based Training for Tactical Athletes
 description: >-
-  Tactical fitness insights, training protocols, and performance optimization
-  strategies for serious athletes and tactical professionals.
+  Master tactical fitness with science-backed HIC, LISS, and strength training protocols.
+  Expert guidance for operators, first responders, and competitive tactical athletes.
 baseurl: "/"
 url: "https://tacticaltraining.eu"
+
+# Default image for social sharing
+default_image: /assets/images/default-og-image.jpg
 
 # Output to Rails public directory
 destination: ../public/blog
@@ -29,16 +33,23 @@ minima:
         user_url: "https://github.com/ihoka/tacticaltraining.eu",
       }
 
+# Twitter configuration
+twitter:
+  username: TacticalTraining
+  card: summary_large_image
+
+# Social links for structured data
+social:
+  name: Tactical Training
+  links:
+    - https://github.com/ihoka/tacticaltraining.eu
+
 # Author information
 author:
   name: Kent
   email: kent@tacticaltraining.eu
 
-# Collections
-collections:
-  categories:
-    output: true
-    permalink: /category/:name/
+# Collections (none currently)
 
 # Pagination
 paginate: 10
@@ -52,6 +63,7 @@ defaults:
     values:
       layout: "post"
       author: "Kent"
+      image: /assets/images/default-post-image.jpg
   - scope:
       path: ""
     values:

@@ -822,3 +822,161 @@ th {
 .text-accent { color: var(--tactical-accent); }
 .mt-0 { margin-top: 0; }
 .mb-0 { margin-bottom: 0; }
+
+/* ============================================
+   Breadcrumbs
+   ============================================ */
+.breadcrumbs {
+  max-width: var(--content-width);
+  margin: 0 auto var(--spacing-lg);
+}
+
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item:not(:last-child)::after {
+  content: "/";
+  margin-left: var(--spacing-sm);
+  color: var(--tactical-muted);
+}
+
+.breadcrumb-item a {
+  color: var(--tactical-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-item a:hover {
+  color: var(--tactical-accent);
+}
+
+.breadcrumb-item.active {
+  color: var(--tactical-muted);
+}
+
+/* ============================================
+   404 Page
+   ============================================ */
+.error-page {
+  text-align: center;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--spacing-3xl) var(--spacing-md);
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: 900;
+  color: var(--tactical-olive);
+  margin-bottom: var(--spacing-md);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.error-title {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.error-description {
+  color: var(--tactical-text-secondary);
+  margin-bottom: var(--spacing-xl);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .error-actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.error-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.error-btn-primary {
+  background-color: var(--tactical-olive);
+  color: var(--tactical-text);
+}
+
+.error-btn-primary:hover {
+  background-color: var(--tactical-olive-light);
+  color: var(--tactical-text);
+}
+
+.error-btn-secondary {
+  background-color: var(--tactical-surface);
+  border: 1px solid var(--tactical-border);
+  color: var(--tactical-text-secondary);
+}
+
+.error-btn-secondary:hover {
+  border-color: var(--tactical-olive);
+  color: var(--tactical-text);
+}
+
+/* ============================================
+   Category Archive Pages
+   ============================================ */
+.category-page {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.category-header {
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--tactical-border);
+}
+
+.category-title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.category-description {
+  color: var(--tactical-text-secondary);
+  margin-top: var(--spacing-md);
+}
+
+.category-count {
+  display: inline-flex;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--tactical-olive);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: var(--spacing-sm);
+}

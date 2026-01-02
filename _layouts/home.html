@@ -8,16 +8,17 @@ layout: default
     <p class="hero-tagline">{{ site.description | escape }}</p>
   </div>
 
-  {%- if site.posts.size > 0 -%}
+  {%- assign posts = site.posts -%}
+  {%- if posts.size > 0 -%}
     <h2 class="section-title">Latest Intel</h2>
     <ul class="post-list">
-      {%- for post in site.posts -%}
+      {%- for post in posts -%}
       <li class="post-card">
         <article>
           {%- if post.categories.size > 0 -%}
           <div class="post-categories">
             {%- for category in post.categories -%}
-            <span class="category-badge category-{{ category | downcase | replace: ' ', '-' }}">{{ category | upcase }}</span>
+            <a href="{{ '/category/' | append: category | downcase | relative_url }}" class="category-badge category-{{ category | downcase | replace: ' ', '-' }}">{{ category | upcase }}</a>
             {%- endfor -%}
           </div>
           {%- endif -%}
@@ -29,8 +30,13 @@ layout: default
             {%- if post.author -%}
             <span class="post-author">&bull; {{ post.author }}</span>
             {%- endif -%}
+            {%- if post.reading_time -%}
+            <span class="reading-time">&bull; {{ post.reading_time }} min read</span>
+            {%- endif -%}
           </div>
-          {%- if post.excerpt -%}
+          {%- if post.description -%}
+          <div class="post-excerpt">{{ post.description }}</div>
+          {%- elsif post.excerpt -%}
           <div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</div>
           {%- endif -%}
           <a href="{{ post.url | relative_url }}" class="read-more">Read Full Report &rarr;</a>
@@ -38,17 +44,5 @@ layout: default
       </li>
       {%- endfor -%}
     </ul>
-
-    {%- if site.paginate -%}
-    <div class="pagination">
-      {%- if paginator.previous_page -%}
-      <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-link">&laquo; Previous</a>
-      {%- endif -%}
-      <span class="pagination-info">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-      {%- if paginator.next_page -%}
-      <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-link">Next &raquo;</a>
-      {%- endif -%}
-    </div>
-    {%- endif -%}
   {%- endif -%}
 </div>
