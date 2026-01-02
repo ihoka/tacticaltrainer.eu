@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<div class="home">
+  <div class="hero">
+    <h1 class="hero-title">{{ site.title | escape }}</h1>
+    <p class="hero-tagline">{{ site.description | escape }}</p>
+  </div>
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="section-title">Latest Intel</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li class="post-card">
+        <article>
+          {%- if post.categories.size > 0 -%}
+          <div class="post-categories">
+            {%- for category in post.categories -%}
+            <span class="category-badge category-{{ category | downcase | replace: ' ', '-' }}">{{ category | upcase }}</span>
+            {%- endfor -%}
+          </div>
+          {%- endif -%}
+          <h3 class="post-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h3>
+          <div class="post-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: site.minima.date_format }}</time>
+            {%- if post.author -%}
+            <span class="post-author">&bull; {{ post.author }}</span>
+            {%- endif -%}
+          </div>
+          {%- if post.excerpt -%}
+          <div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</div>
+          {%- endif -%}
+          <a href="{{ post.url | relative_url }}" class="read-more">Read Full Report &rarr;</a>
+        </article>
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    {%- if site.paginate -%}
+    <div class="pagination">
+      {%- if paginator.previous_page -%}
+      <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-link">&laquo; Previous</a>
+      {%- endif -%}
+      <span class="pagination-info">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {%- if paginator.next_page -%}
+      <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-link">Next &raquo;</a>
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+  {%- endif -%}
+</div>

@@ -1,0 +1,78 @@
+# Tactical Training Blog
+# Jekyll configuration based on minima, customized for military/tactical theme
+
+title: Tactical Training Blog
+description: >-
+  Tactical fitness insights, training protocols, and performance optimization
+  strategies for serious athletes and tactical professionals.
+baseurl: "/blog"
+url: ""
+
+# Output to Rails public directory
+destination: ../public/blog
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Minima theme customization
+minima:
+  skin: dark
+  date_format: "%B %-d, %Y"
+  social_links:
+    - { platform: github, user_url: "https://github.com/ihoka/tactical-training" }
+
+# Author information
+author:
+  name: Tactical Training Team
+  email: contact@tacticaltraining.io
+
+# Collections
+collections:
+  categories:
+    output: true
+    permalink: /category/:name/
+
+# Pagination
+paginate: 10
+paginate_path: "/page/:num/"
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Tactical Training Team"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+# Sass settings
+sass:
+  style: compressed
+  sass_dir: _sass
