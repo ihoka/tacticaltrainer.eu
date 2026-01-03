@@ -33,7 +33,7 @@ A high-converting marketing landing page for the Tactical Training app - a fitne
 **Content:**
 - **Headline:** "Train Like an Operator"
 - **Subheadline:** "The complete tactical fitness platform for building strength, conditioning, and operational readiness."
-- **Primary CTA:** "Start Training Free" → links to `https://app.tacticaltraining.eu/signup`
+- **Primary CTA:** "Start Training Free" → links to `https://app.tacticaltraining.eu/`
 - **Secondary CTA:** "See How It Works" → smooth scroll to Features section
 - **Visual:** App screenshot mockup showing the Calendar view (the most visually impressive screen)
 
@@ -53,11 +53,11 @@ A high-converting marketing landing page for the Tactical Training app - a fitne
 
 **Pain Points (3 cards):**
 
-| Icon | Problem | Solution |
-|------|---------|----------|
-| 📋 | "Generic programs don't work for tactical demands" | "Programming built specifically for operational athletes" |
-| 📊 | "Tracking workouts in spreadsheets is tedious" | "Automated tracking with intelligent progress monitoring" |
-| 🤔 | "Not sure how to balance strength and conditioning" | "Science-based periodization with HIC/LISS/SE protocols" |
+| Icon | Problem                                             | Solution                                                  |
+| ---- | --------------------------------------------------- | --------------------------------------------------------- |
+| 📋    | "Generic programs don't work for tactical demands"  | "Programming built specifically for operational athletes" |
+| 📊    | "Tracking workouts in spreadsheets is tedious"      | "Automated tracking with intelligent progress monitoring" |
+| 🤔    | "Not sure how to balance strength and conditioning" | "Science-based periodization with HIC/LISS/SE protocols"  |
 
 ---
 
@@ -179,7 +179,7 @@ A high-converting marketing landing page for the Tactical Training app - a fitne
 
 **Headline:** "Ready to Train?"
 **Subheadline:** "Join tactical athletes who take their training seriously."
-**CTA Button:** "Start Training Free" → `https://app.tacticaltraining.eu/signup`
+**CTA Button:** "Start Training Free" → `https://app.tacticaltraining.eu/`
 
 **Design:**
 - High contrast section with olive/gold accent colors
@@ -327,7 +327,7 @@ Use existing CSS variables from the blog:
 
 ## Success Metrics
 
-- **Primary:** Click-through to app signup (`https://app.tacticaltraining.eu/signup`)
+- **Primary:** Click-through to app signup (`https://app.tacticaltraining.eu/`)
 - **Secondary:**
   - Time on page
   - Scroll depth
