@@ -19,19 +19,13 @@
    Marketing Header
    ============================================ */
 .marketing-header {
-  background-color: transparent;
-  border-bottom: none;
+  background-color: var(--tactical-surface);
+  border-bottom: 1px solid var(--tactical-border);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: background-color 0.3s ease;
-}
-
-.marketing-header.scrolled {
-  background-color: var(--tactical-surface);
-  border-bottom: 1px solid var(--tactical-border);
 }
 
 /* ============================================

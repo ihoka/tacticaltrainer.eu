@@ -1,2 +1,6 @@
 [tools]
 ruby = "latest"
+
+[tasks.dev]
+description = "Start Jekyll development server with live reload"
+run = "bundle exec jekyll serve --livereload"

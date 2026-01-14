@@ -8,10 +8,11 @@
   {%- include social-meta.html -%}
   {%- include structured-data.html -%}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/marketing.css' | relative_url }}">
   {%- feed_meta -%}
 </head>
 <body>
-  {%- include header.html -%}
+  {%- include marketing-header.html -%}
 
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
@@ -19,6 +20,6 @@
     </div>
   </main>
 
-  {%- include footer.html -%}
+  {%- include marketing-footer.html -%}
 </body>
 </html>
