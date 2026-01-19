@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tacticaltraining.eu/sitemap.xml
+Sitemap: https://tacticaltrainer.eu/sitemap.xml

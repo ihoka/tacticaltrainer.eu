@@ -4,8 +4,8 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Tactical Training",
-  "url": "https://tacticaltraining.eu",
-  "logo": "https://tacticaltraining.eu/assets/images/logo.png",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}/assets/images/logo.png",
   "sameAs": [
     "https://github.com/ihoka/tacticaltraining.eu"
   ],
@@ -17,19 +17,14 @@
 }
 </script>
 
-<!-- Website Schema with SearchAction -->
+<!-- Website Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "url": "https://tacticaltraining.eu/",
+  "url": "{{ site.url }}/",
   "name": "Tactical Training Blog",
-  "description": "{{ site.description | escape }}",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://tacticaltraining.eu/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+  "description": "{{ site.description | escape }}"
 }
 </script>
 
@@ -49,14 +44,14 @@
   "author": {
     "@type": "Person",
     "name": "{{ page.author | default: site.author.name }}",
-    "url": "https://tacticaltraining.eu/about"
+    "url": "{{ '/about' | absolute_url }}"
   },
   "publisher": {
     "@type": "Organization",
     "name": "{{ site.title }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://tacticaltraining.eu/assets/images/logo.png"
+      "url": "{{ '/assets/images/logo.png' | absolute_url }}"
     }
   },
   "datePublished": "{{ page.date | date_to_xmlschema }}",

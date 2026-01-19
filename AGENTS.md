@@ -150,7 +150,8 @@ Use these standardized categories:
 
 ### _config.yml Key Settings
 
-- `baseurl: "/blog"` - Site is served from /blog path
+- `url: "https://tacticaltrainer.eu"` - Production domain (critical for SEO)
+- `baseurl: "/"` - Site is served from domain root
 - `destination: ../public/blog` - Builds to Rails public folder
 - `theme: minima` with `skin: dark`
 - Kramdown markdown with GitHub Flavored Markdown (GFM)
@@ -158,10 +159,24 @@ Use these standardized categories:
 
 ### Environment Variables
 
-No environment variables required for basic development. Production builds should use:
+**CRITICAL for Production Builds:**
+
+Production builds MUST use `JEKYLL_ENV=production` to generate correct URLs for SEO:
+
 ```bash
+# Correct production build
 JEKYLL_ENV=production bundle exec jekyll build
+
+# Wrong - generates localhost URLs in sitemap and canonical tags
+bundle exec jekyll build
 ```
+
+**Why This Matters:**
+- Without `JEKYLL_ENV=production`, the sitemap.xml will contain `http://localhost:4000` URLs
+- Canonical tags will point to localhost instead of production domain
+- This breaks Google Search Console indexing and causes duplicate content issues
+
+**GitHub Actions:** The CI workflow (`.github/workflows/jekyll-gh-pages.yml`) correctly sets `JEKYLL_ENV=production`. Local/server deployments must do the same.
 
 ## Dependencies
 
