@@ -1,0 +1,19 @@
+{% if jekyll.environment == "production" %}
+<!-- Tactical Trainer Tracking Bundle v1 -->
+<!-- Cookie Consent + Google Analytics -->
+<script
+  src="{{ '/assets/js/tracking-v1.min.js' | relative_url }}"
+  defer
+></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    TacticalTracking.init({
+      measurementId: "G-S1HPGRH0XY",
+      cookieDomain: ".tacticaltrainer.eu",
+      contentGroup: '{{ page.content_group | default: "marketing" }}',
+    });
+  });
+</script>
+{% else %}
+<!-- Tracking disabled in development -->
+{% endif %}
