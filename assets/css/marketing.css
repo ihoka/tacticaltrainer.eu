@@ -1083,3 +1083,106 @@ html {
   line-height: 1.7;
   margin: 0;
 }
+
+/* ============================================
+   Blog Preview Section (Homepage)
+   ============================================ */
+.blog-preview-section {
+  padding: var(--spacing-3xl) 0;
+  background-color: var(--tactical-surface);
+}
+
+.blog-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+@media (min-width: 640px) {
+  .blog-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-preview-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.blog-preview-card {
+  background-color: var(--tactical-elevated);
+  border: 1px solid var(--tactical-border);
+  border-radius: 1rem;
+  padding: var(--spacing-xl);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.blog-preview-card:hover {
+  border-color: var(--tactical-olive);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.blog-preview-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.blog-preview-category {
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--tactical-olive-light);
+  background-color: rgba(74, 93, 35, 0.2);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 0.25rem;
+}
+
+.blog-preview-date {
+  font-size: 0.75rem;
+  color: var(--tactical-text-secondary);
+}
+
+.blog-preview-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--tactical-text);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.4;
+}
+
+.blog-preview-card:hover .blog-preview-title {
+  color: var(--tactical-accent);
+}
+
+.blog-preview-excerpt {
+  font-size: 0.875rem;
+  color: var(--tactical-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+  flex: 1;
+}
+
+.blog-preview-link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--tactical-accent);
+}
+
+.blog-preview-card:hover .blog-preview-link {
+  text-decoration: underline;
+}
+
+.blog-preview-cta {
+  text-align: center;
+}

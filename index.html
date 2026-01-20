@@ -273,6 +273,35 @@ description: "The complete tactical fitness platform for military, law enforceme
   </div>
 </section>
 
+<!-- Featured Blog Posts Section -->
+<section class="blog-preview-section">
+  <div class="wrapper">
+    <div class="section-header">
+      <span class="section-badge">From the Blog</span>
+      <h2 class="section-title">Training Intel</h2>
+      <p class="section-subtitle">
+        Evidence-based training insights for tactical athletes.
+      </p>
+    </div>
+    <div class="blog-preview-grid">
+      {%- for post in site.posts limit:3 -%}
+      <a href="{{ post.url | relative_url }}" class="blog-preview-card">
+        <div class="blog-preview-meta">
+          <span class="blog-preview-category">{{ post.categories | first }}</span>
+          <span class="blog-preview-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </div>
+        <h3 class="blog-preview-title">{{ post.title | escape }}</h3>
+        <p class="blog-preview-excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+        <span class="blog-preview-link">Read More</span>
+      </a>
+      {%- endfor -%}
+    </div>
+    <div class="blog-preview-cta">
+      <a href="{{ '/blog' | relative_url }}" class="btn btn-secondary">View All Articles</a>
+    </div>
+  </div>
+</section>
+
 <!-- Final CTA Section -->
 <section class="cta-section">
   <div class="wrapper">
