@@ -87,11 +87,50 @@ blog/
   author: Tactical Training Team
   tags: [tag1, tag2, tag3]
   reading_time: 5
+  image: /assets/images/image-name.jpg
   ---
   ```
 - Use descriptive, action-oriented titles
 - Include reading_time for estimated read duration
 - Categories: Training, HIC, LISS, SE, Strength, Nutrition, Recovery, Mindset
+
+### Featured Images (REQUIRED for new posts)
+
+**Every new blog post MUST have a featured image.** Create it automatically when adding a post.
+
+**Image Specifications:**
+- Dimensions: 1200 x 630 px (1.91:1 aspect ratio for social sharing)
+- Formats: Both `.jpg` and `.webp` (WebP for modern browsers, JPEG for social crawlers)
+- Location: `assets/images/` directory
+- Naming: Match the image name referenced in front matter (e.g., `image-name.jpg`)
+
+**Creation Workflow:**
+1. Create SVG using the tactical theme (see existing SVGs in `assets/images/` as templates)
+2. Convert to JPEG and WebP:
+   ```bash
+   cd assets/images
+   rsvg-convert image-name.svg -o image-name.png
+   magick image-name.png -quality 90 image-name.jpg
+   magick image-name.png -quality 85 image-name.webp
+   rm image-name.png
+   ```
+3. Add `image: /assets/images/image-name.jpg` to post front matter
+
+**Design Guidelines:**
+- Dark tactical background (`#0d0f0e` to `#1a1d1b` gradient)
+- Grid pattern overlay for texture
+- Category badge matching post category (use category colors from CSS)
+- Post title and subtitle
+- Gold accent underline (`#d4a84b`)
+- Domain footer: tacticaltrainer.eu
+- Corner brackets and diagonal accent lines
+
+**Category Badge Colors:**
+- HIC: Red (`rgba(239, 68, 68, 0.2)`, text `#f87171`)
+- Training: Gold (`rgba(212, 168, 75, 0.2)`, text `#d4a84b`)
+- Strength: Blue (`rgba(96, 165, 250, 0.2)`, text `#60a5fa`)
+- Recovery: Yellow (`rgba(251, 191, 36, 0.2)`, text `#fbbf24`)
+- Technology: Blue (`rgba(96, 165, 250, 0.2)`, text `#60a5fa`)
 
 ### Liquid Templates
 

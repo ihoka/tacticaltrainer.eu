@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0f0e"/>
+      <stop offset="50%" style="stop-color:#1a1d1b"/>
+      <stop offset="100%" style="stop-color:#0d0f0e"/>
+    </linearGradient>
+    <linearGradient id="oliveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a4a1c"/>
+      <stop offset="100%" style="stop-color:#5c7a2e"/>
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b7235"/>
+      <stop offset="50%" style="stop-color:#d4a84b"/>
+      <stop offset="100%" style="stop-color:#8b7235"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#232826" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.4"/>
+
+  <g opacity="0.15">
+    <line x1="0" y1="150" x2="150" y2="0" stroke="#4a5d23" stroke-width="2"/>
+    <line x1="0" y1="200" x2="200" y2="0" stroke="#4a5d23" stroke-width="2"/>
+    <line x1="1050" y1="630" x2="1200" y2="480" stroke="#4a5d23" stroke-width="2"/>
+    <line x1="1000" y1="630" x2="1200" y2="430" stroke="#4a5d23" stroke-width="2"/>
+  </g>
+
+  <rect x="0" y="0" width="1200" height="4" fill="url(#oliveGradient)"/>
+  <rect x="0" y="626" width="1200" height="4" fill="url(#oliveGradient)"/>
+
+  <rect x="150" y="140" width="900" height="350" rx="8" fill="#1a1d1b" opacity="0.85"/>
+  <rect x="150" y="140" width="900" height="350" rx="8" fill="none" stroke="#3a3f3c" stroke-width="1"/>
+
+  <!-- Moon/Sleep Icon -->
+  <g transform="translate(600, 215)">
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#fbbf24" stroke-width="3" opacity="0.8"/>
+    <circle cx="12" cy="-8" r="28" fill="#1a1d1b"/>
+    <!-- Stars -->
+    <circle cx="-40" cy="-15" r="3" fill="#fbbf24" opacity="0.6"/>
+    <circle cx="-50" cy="10" r="2" fill="#fbbf24" opacity="0.4"/>
+    <circle cx="45" cy="-25" r="2" fill="#fbbf24" opacity="0.5"/>
+  </g>
+
+  <!-- Category badge -->
+  <rect x="510" y="265" width="180" height="28" rx="14" fill="rgba(251, 191, 36, 0.2)"/>
+  <text x="600" y="285" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#fbbf24" letter-spacing="2">
+    RECOVERY
+  </text>
+
+  <text x="600" y="350" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="38" font-weight="700" fill="#e8ebe9" letter-spacing="2">
+    RECOVERY PROTOCOLS
+  </text>
+
+  <text x="600" y="390" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="400" fill="#a3a8a5" letter-spacing="2">
+    Sleep, Nutrition &amp; Active Recovery
+  </text>
+
+  <rect x="400" y="410" width="400" height="3" fill="url(#goldGradient)"/>
+
+  <text x="600" y="455" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6b706d" letter-spacing="2">
+    tacticaltrainer.eu
+  </text>
+
+  <g stroke="#4a5d23" stroke-width="2" fill="none" opacity="0.5">
+    <path d="M 170 160 L 170 150 L 180 150"/>
+    <path d="M 1030 150 L 1040 150 L 1040 160"/>
+    <path d="M 1040 470 L 1040 480 L 1030 480"/>
+    <path d="M 180 480 L 170 480 L 170 470"/>
+  </g>
+</svg>

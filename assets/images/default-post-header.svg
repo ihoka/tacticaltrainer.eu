@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <!-- Tactical background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0f0e"/>
+      <stop offset="50%" style="stop-color:#1a1d1b"/>
+      <stop offset="100%" style="stop-color:#0d0f0e"/>
+    </linearGradient>
+
+    <!-- Olive accent gradient -->
+    <linearGradient id="oliveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a4a1c"/>
+      <stop offset="100%" style="stop-color:#5c7a2e"/>
+    </linearGradient>
+
+    <!-- Gold accent gradient -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b7235"/>
+      <stop offset="50%" style="stop-color:#d4a84b"/>
+      <stop offset="100%" style="stop-color:#8b7235"/>
+    </linearGradient>
+
+    <!-- Subtle grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#232826" stroke-width="1"/>
+    </pattern>
+
+    <!-- Crosshair pattern for tactical feel -->
+    <pattern id="crosshairs" width="100" height="100" patternUnits="userSpaceOnUse">
+      <circle cx="50" cy="50" r="2" fill="#232826" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Subtle grid overlay -->
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.4"/>
+
+  <!-- Crosshair dots -->
+  <rect width="1200" height="630" fill="url(#crosshairs)"/>
+
+  <!-- Diagonal accent lines (top-left corner) -->
+  <g opacity="0.15">
+    <line x1="0" y1="150" x2="150" y2="0" stroke="#4a5d23" stroke-width="2"/>
+    <line x1="0" y1="200" x2="200" y2="0" stroke="#4a5d23" stroke-width="2"/>
+    <line x1="0" y1="250" x2="250" y2="0" stroke="#4a5d23" stroke-width="2"/>
+  </g>
+
+  <!-- Diagonal accent lines (bottom-right corner) -->
+  <g opacity="0.15">
+    <line x1="1050" y1="630" x2="1200" y2="480" stroke="#4a5d23" stroke-width="2"/>
+    <line x1="1000" y1="630" x2="1200" y2="430" stroke="#4a5d23" stroke-width="2"/>
+    <line x1="950" y1="630" x2="1200" y2="380" stroke="#4a5d23" stroke-width="2"/>
+  </g>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#oliveGradient)"/>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="626" width="1200" height="4" fill="url(#oliveGradient)"/>
+
+  <!-- Center content area background -->
+  <rect x="200" y="165" width="800" height="300" rx="8" fill="#1a1d1b" opacity="0.8"/>
+  <rect x="200" y="165" width="800" height="300" rx="8" fill="none" stroke="#3a3f3c" stroke-width="1"/>
+
+  <!-- Target/crosshair icon -->
+  <g transform="translate(600, 250)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#4a5d23" stroke-width="3" opacity="0.6"/>
+    <!-- Inner ring -->
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#5c7a2e" stroke-width="2" opacity="0.8"/>
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="5" fill="#d4a84b"/>
+    <!-- Crosshair lines -->
+    <line x1="-50" y1="0" x2="-40" y2="0" stroke="#4a5d23" stroke-width="2"/>
+    <line x1="40" y1="0" x2="50" y2="0" stroke="#4a5d23" stroke-width="2"/>
+    <line x1="0" y1="-50" x2="0" y2="-40" stroke="#4a5d23" stroke-width="2"/>
+    <line x1="0" y1="40" x2="0" y2="50" stroke="#4a5d23" stroke-width="2"/>
+  </g>
+
+  <!-- Main title: TACTICAL TRAINER -->
+  <text x="600" y="345" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="700" fill="#e8ebe9" letter-spacing="8">
+    TACTICAL TRAINER
+  </text>
+
+  <!-- Gold underline -->
+  <rect x="350" y="365" width="500" height="3" fill="url(#goldGradient)"/>
+
+  <!-- Tagline -->
+  <text x="600" y="410" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400" fill="#a3a8a5" letter-spacing="4">
+    TRAIN HARD. STAY READY.
+  </text>
+
+  <!-- Domain -->
+  <text x="600" y="450" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6b706d" letter-spacing="2">
+    tacticaltrainer.eu
+  </text>
+
+  <!-- Corner brackets for tactical feel -->
+  <!-- Top-left bracket -->
+  <g stroke="#4a5d23" stroke-width="2" fill="none" opacity="0.5">
+    <path d="M 220 185 L 220 175 L 230 175"/>
+    <path d="M 980 175 L 990 175 L 990 185"/>
+    <path d="M 990 445 L 990 455 L 980 455"/>
+    <path d="M 230 455 L 220 455 L 220 445"/>
+  </g>
+</svg>
