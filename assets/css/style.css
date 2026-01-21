@@ -514,6 +514,38 @@ th {
   margin: 0 auto;
 }
 
+/* ============================================
+   Post Featured Image Header
+   ============================================ */
+.post-featured-image {
+  margin-bottom: var(--spacing-xl);
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background-color: var(--tactical-surface);
+  border: 1px solid var(--tactical-border);
+}
+
+.post-header-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 1200 / 630;
+  object-fit: cover;
+  background: linear-gradient(
+    135deg,
+    var(--tactical-surface) 0%,
+    var(--tactical-bg) 100%
+  );
+}
+
+@media (min-width: 1024px) {
+  .post-featured-image {
+    margin-left: calc(-1 * var(--spacing-xl));
+    margin-right: calc(-1 * var(--spacing-xl));
+    border-radius: 1rem;
+  }
+}
+
 .post-header {
   margin-bottom: var(--spacing-2xl);
   padding-bottom: var(--spacing-xl);

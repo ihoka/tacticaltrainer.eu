@@ -5,6 +5,28 @@ layout: default
 {%- include breadcrumbs.html -%}
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  {%- comment -%}Featured Image Header{%- endcomment -%}
+  {%- assign img_path = page.image.path | default: page.image -%}
+  {%- if img_path -%}
+  {%- assign img_alt = page.image.alt | default: page.image_alt | default: page.title -%}
+  <div class="post-featured-image">
+    <picture>
+      {%- assign webp_path = img_path | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' -%}
+      <source srcset="{{ webp_path | relative_url }}" type="image/webp">
+      <img
+        src="{{ img_path | relative_url }}"
+        alt="{{ img_alt | escape }}"
+        width="1200"
+        height="630"
+        loading="eager"
+        decoding="async"
+        class="post-header-image"
+        itemprop="image"
+      >
+    </picture>
+  </div>
+  {%- endif -%}
+
   <header class="post-header">
     {%- if page.categories.size > 0 -%}
     <div class="post-categories">
