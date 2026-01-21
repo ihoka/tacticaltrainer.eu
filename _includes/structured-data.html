@@ -29,6 +29,20 @@
 </script>
 
 {%- if page.layout == "post" -%}
+{%- comment -%}Resolve image for structured data{%- endcomment -%}
+{%- if page.image.path -%}
+  {%- assign article_image = page.image.path -%}
+  {%- assign article_image_width = page.image.width | default: 1200 -%}
+  {%- assign article_image_height = page.image.height | default: 630 -%}
+{%- elsif page.image -%}
+  {%- assign article_image = page.image -%}
+  {%- assign article_image_width = 1200 -%}
+  {%- assign article_image_height = 630 -%}
+{%- else -%}
+  {%- assign article_image = '/assets/images/default-post-header.jpg' -%}
+  {%- assign article_image_width = 1200 -%}
+  {%- assign article_image_height = 630 -%}
+{%- endif -%}
 <!-- Enhanced Article Schema -->
 <script type="application/ld+json">
 {
@@ -40,7 +54,12 @@
   },
   "headline": "{{ page.title | escape }}",
   "description": "{{ page.description | default: page.excerpt | strip_html | truncate: 160 | escape }}",
-  "image": "{{ page.image | default: '/assets/images/default-post-image.jpg' | absolute_url }}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ article_image | absolute_url }}",
+    "width": {{ article_image_width }},
+    "height": {{ article_image_height }}
+  },
   "author": {
     "@type": "Person",
     "name": "{{ page.author | default: site.author.name }}",

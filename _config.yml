@@ -9,8 +9,12 @@ description: >-
 baseurl: "/"
 url: "https://tacticaltrainer.eu"
 
-# Default image for social sharing
-default_image: /assets/images/default-og-image.jpg
+# Default image for social sharing (1200x630 for optimal social display)
+default_image:
+  path: /assets/images/default-post-header.jpg
+  alt: "Tactical Training - Train Hard, Stay Ready"
+  width: 1200
+  height: 630
 
 # Output to Rails public directory
 destination: ../public/blog
@@ -63,7 +67,11 @@ defaults:
     values:
       layout: "post"
       author: "Kent"
-      image: /assets/images/default-post-image.jpg
+      image:
+        path: /assets/images/default-post-header.jpg
+        alt: "Tactical Training - Train Hard, Stay Ready"
+        width: 1200
+        height: 630
   - scope:
       path: ""
     values:
