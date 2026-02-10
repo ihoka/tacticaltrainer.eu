@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Meet Kent: Your AI Training Assistant"
-date: 2026-02-10 10:00:00 -0500
+date: 2026-02-10 00:00:00 -0500
 categories: [Training, Technology]
 author: Tactical Training Team
 tags: [tactical barbell, ai assistant, training coach, programming, kent, tactical trainer]
