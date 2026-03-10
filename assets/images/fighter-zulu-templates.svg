@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0f0e"/>
+      <stop offset="50%" style="stop-color:#1a1d1b"/>
+      <stop offset="100%" style="stop-color:#0d0f0e"/>
+    </linearGradient>
+    <linearGradient id="oliveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a4a1c"/>
+      <stop offset="100%" style="stop-color:#5c7a2e"/>
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b7235"/>
+      <stop offset="50%" style="stop-color:#d4a84b"/>
+      <stop offset="100%" style="stop-color:#8b7235"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#232826" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.4"/>
+
+  <g opacity="0.15">
+    <line x1="0" y1="150" x2="150" y2="0" stroke="#4a5d23" stroke-width="2"/>
+    <line x1="0" y1="200" x2="200" y2="0" stroke="#4a5d23" stroke-width="2"/>
+    <line x1="1050" y1="630" x2="1200" y2="480" stroke="#4a5d23" stroke-width="2"/>
+    <line x1="1000" y1="630" x2="1200" y2="430" stroke="#4a5d23" stroke-width="2"/>
+  </g>
+
+  <rect x="0" y="0" width="1200" height="4" fill="url(#oliveGradient)"/>
+  <rect x="0" y="626" width="1200" height="4" fill="url(#oliveGradient)"/>
+
+  <rect x="150" y="100" width="900" height="430" rx="8" fill="#1a1d1b" opacity="0.85"/>
+  <rect x="150" y="100" width="900" height="430" rx="8" fill="none" stroke="#3a3f3c" stroke-width="1"/>
+
+  <!-- Category badges -->
+  <g transform="translate(600, 135)">
+    <rect x="-120" y="0" width="110" height="24" rx="12" fill="rgba(212, 168, 75, 0.2)"/>
+    <text x="-65" y="17" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#d4a84b" letter-spacing="1">
+      TRAINING
+    </text>
+    <rect x="10" y="0" width="110" height="24" rx="12" fill="rgba(96, 165, 250, 0.2)"/>
+    <text x="65" y="17" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#60a5fa" letter-spacing="1">
+      TECHNOLOGY
+    </text>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="215" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="700" fill="#e8ebe9" letter-spacing="2">
+    FIGHTER &amp; ZULU TEMPLATES
+  </text>
+
+  <text x="600" y="255" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="400" fill="#a3a8a5" letter-spacing="2">
+    Choose Your Strength Template
+  </text>
+
+  <rect x="400" y="275" width="400" height="3" fill="url(#goldGradient)"/>
+
+  <!-- Three template cards -->
+  <!-- Fighter -->
+  <g transform="translate(280, 320)">
+    <rect x="0" y="0" width="180" height="120" rx="6" fill="#232826" stroke="#4a5d23" stroke-width="1.5"/>
+    <text x="90" y="30" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#e8ebe9" letter-spacing="1">
+      FIGHTER
+    </text>
+    <text x="90" y="55" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#a3a8a5">
+      2 days/week
+    </text>
+    <text x="90" y="75" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#a3a8a5">
+      3-4 lifts
+    </text>
+    <text x="90" y="105" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#d4a84b" letter-spacing="1">
+      NEW
+    </text>
+  </g>
+
+  <!-- Operator -->
+  <g transform="translate(510, 320)">
+    <rect x="0" y="0" width="180" height="120" rx="6" fill="#232826" stroke="#3a3f3c" stroke-width="1.5"/>
+    <text x="90" y="30" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#e8ebe9" letter-spacing="1">
+      OPERATOR
+    </text>
+    <text x="90" y="55" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#a3a8a5">
+      3 days/week
+    </text>
+    <text x="90" y="75" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#a3a8a5">
+      2-3 lifts
+    </text>
+    <text x="90" y="105" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#6b706d" letter-spacing="1">
+      STANDARD
+    </text>
+  </g>
+
+  <!-- Zulu -->
+  <g transform="translate(740, 320)">
+    <rect x="0" y="0" width="180" height="120" rx="6" fill="#232826" stroke="#4a5d23" stroke-width="1.5"/>
+    <text x="90" y="30" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#e8ebe9" letter-spacing="1">
+      ZULU
+    </text>
+    <text x="90" y="55" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#a3a8a5">
+      4 days/week
+    </text>
+    <text x="90" y="75" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="400" fill="#a3a8a5">
+      3-6 lifts · A/B split
+    </text>
+    <text x="90" y="105" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#d4a84b" letter-spacing="1">
+      NEW
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="500" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#6b706d" letter-spacing="2">
+    tacticaltrainer.eu
+  </text>
+
+  <!-- Corner brackets -->
+  <g stroke="#4a5d23" stroke-width="2" fill="none" opacity="0.5">
+    <path d="M 170 120 L 170 110 L 180 110"/>
+    <path d="M 1030 110 L 1040 110 L 1040 120"/>
+    <path d="M 1040 520 L 1040 530 L 1030 530"/>
+    <path d="M 180 530 L 170 530 L 170 520"/>
+  </g>
+</svg>
