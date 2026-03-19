@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Max Strength Training: The High Frequency, Low Volume Approach"
+title: "Max Strength: High Frequency Approach"
 date: 2026-01-16 10:00:00 -0500
 categories: [Strength, Training]
 author: Tactical Training Team

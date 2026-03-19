@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "However Beautiful the Strategy, You Should Occasionally Look at the Results"
+title: "Beautiful Strategy? Look at the Results"
 date: 2026-01-15 10:00:00 -0500
 categories: [Training, Strength]
 author: Tactical Training Team

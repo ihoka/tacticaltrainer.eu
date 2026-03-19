@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "7 Evidence-Based Recovery Methods for Tactical Athletes: Sleep, Nutrition & Active Recovery"
+title: "7 Recovery Protocols for Tactical Athletes"
 date: 2024-12-28 07:00:00 -0500
 categories: [Recovery]
 author: Tactical Training Team

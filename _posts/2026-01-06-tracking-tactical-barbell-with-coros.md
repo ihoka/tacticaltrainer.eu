@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How I Use the Coros Pace Pro and Training Hub to Track Tactical Barbell Workouts"
+title: "Tracking Tactical Barbell with Coros"
 date: 2026-01-06 10:00:00 -0500
 categories: [Training, Technology]
 author: Tactical Training Team

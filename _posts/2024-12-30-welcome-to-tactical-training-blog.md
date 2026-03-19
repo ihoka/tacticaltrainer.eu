@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tactical Fitness Training: Science-Based Programs for Operators & First Responders"
+title: "Science-Based Tactical Fitness Programs"
 date: 2024-12-30 09:00:00 -0500
 categories: [Training]
 author: Tactical Training Team

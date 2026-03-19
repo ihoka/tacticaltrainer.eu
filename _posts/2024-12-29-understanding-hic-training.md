@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "HIC Training Guide: 5 High-Intensity Protocols for Tactical Athletes (2025)"
+title: "HIC Training: 5 Tactical Protocols"
 date: 2024-12-29 08:00:00 -0500
 categories: [HIC, Training]
 author: Tactical Training Team
