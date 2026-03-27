@@ -211,6 +211,12 @@
   }
 }
 
+.hero-risk-reversal {
+  font-size: 0.875rem;
+  color: var(--tactical-text-secondary);
+  margin-top: var(--spacing-sm);
+}
+
 .hero-visual {
   display: none;
 }
@@ -642,6 +648,12 @@
   .cta-buttons {
     flex-direction: row;
   }
+}
+
+.cta-risk-reversal {
+  font-size: 0.875rem;
+  color: var(--tactical-text-secondary);
+  margin-top: var(--spacing-sm);
 }
 
 /* ============================================
